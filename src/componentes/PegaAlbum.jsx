@@ -5,8 +5,8 @@ const PegaComponente = () => {
   const [produtos, setProdutos] = useState([]);
 
   const pegaDados = async () => {
-    const produtosServiço = await pegaListaDeProdutos();
-    setProdutos(produtosServiço);
+    const [produtosServiço, erro] = await pegaListaDeProdutos();
+    erro ? console.log("O Erro é:", erro) : setProdutos(produtosServiço);
   };
 
   useEffect(() => {
