@@ -3,6 +3,15 @@ import { pegaListaDeProdutos } from "./serviços/ServiçoProdutoLoja";
 
 const Carregando = () => <p>carregando...</p>;
 const Erro = ({ msg }) => <p>{msg}</p>;
+const Sucesso = ({ produtos }) => (
+  <>
+    {produtos.map((produto) => (
+      <div key={produto.id}>
+        <p>{produto.descricaoDoProduto}</p>
+      </div>
+    ))}
+  </>
+);
 
 const PegaComponente = () => {
   const [produtos, setProdutos] = useState([]);
