@@ -27,7 +27,6 @@ const PegaComponente = () => {
   useEffect(() => {
     pegaDados();
   }, []);
-  console.log(produtos);
 
   return (
     <>
